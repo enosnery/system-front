@@ -1,9 +1,10 @@
 <template>
   <div id="app">
+      <div id="header-style">
+        <menu-header></menu-header>
+      </div>
+      <div id="body-style">
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm input-style"><img src="../../assets/test_pattern.svg" alt="test" width="384"></div>
-            </div>
             <div class="row">
                 <div class="col-sm input-style"><h1>Bem-vindo ao Systema!</h1></div>
             </div>
@@ -23,17 +24,27 @@
                 <div class="col-sm"></div>
             </div>
         </div>
+      </div>
   </div>
 </template>
 
 <script>
 import axios from "axios";
+import Header from '../../components/Header'
 
 export default {
   name: 'app',
+    beforeCreate: function () {
+        if (!this.$session.exists()) {
+            window.location.href = "/";
+        }
+    },
+    components: {
+      'menu-header': Header
+    },
     data(){
       return{
-       session: this.$session.get("response")
+       session: this.$session.get("user")
       }
     },
   methods:{
@@ -48,7 +59,8 @@ export default {
               .catch(function (error) {
                   alert(error)
               });
-      }
+      },
+
   }
 }
 
@@ -58,10 +70,10 @@ export default {
 
 
 <style>
-#app {
+#body-style {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   height: 95vh;
   font-family: 'Nunito', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

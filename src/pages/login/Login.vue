@@ -31,6 +31,11 @@ import axios from "axios";
 
 export default {
   name: 'app',
+    beforeCreate: function () {
+        if (this.$session.exists()) {
+            window.location.href = "/menu";
+        }
+    },
     data(){
       return{
        login: '',
@@ -47,14 +52,15 @@ export default {
           })
               .then(function (response) {
                   self.$session.start();
-                  self.$session.set("response", response.data);
+                  self.$session.set("user", response.data);
                  window.location.href="/menu"
               })
               .catch(function (error) {
                   alert(error)
               });
       }
-  }
+  },
+
 }
 
 
