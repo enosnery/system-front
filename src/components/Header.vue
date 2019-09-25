@@ -1,28 +1,31 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="/">
-            <img src="../assets/test_pattern.svg" alt="Logo" width="42">
-            <span id="brand-name">Systema</span>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBarNav" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
      <div class="collapse navbar-collapse" id="navBarNav">
-         <ul class="navbar-nav">
+         <a class="navbar-brand" href="/menu">
+             <img src="../assets/test_pattern.svg" alt="Logo" width="42">
+             <span id="brand-name">Systema</span>
+         </a>
+         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
              <li class="nav-item">
-                <a class="nav-link" href="/menu">Menu</a>
+                <a class="nav-link" href="/registry">Cadastros</a>
              </li>
          </ul>
+         <div class="d-flex justify-content-end">
              <span class="navbar-text">
-                 <a class="nav-link" v-on:click="logout">Logout</a>
+                 <a class="nav-link" v-on:click="logout"><i class="fas fa-sign-out-alt"></i></a>
              </span>
+         </div>
      </div>
+
     </nav>
 </template>
 
 <script>
     export default {
-        name: 'header',
+        name: 'custom-header',
         methods:{
             logout: function() {
                 this.$session.destroy();
@@ -35,13 +38,6 @@
 <style>
     a{
         color: inherit;
-    }
-    .nav-link{
-        color: black;
-        text-decoration: none;
-        cursor: pointer;
-
-
     }
     .nav-link:hover{
         text-decoration: none;
@@ -58,11 +54,8 @@
         cursor: pointer;
     }
     #brand-name{
-        margin: 5px 0 5px 5px;
+        margin: 5px 0 5px 0;
         padding: 10px 10px 10px 10px;
     }
-    #brand-name:hover{
-        background-color: slategrey;
-        border-radius: 20px;
-    }
+
 </style>
