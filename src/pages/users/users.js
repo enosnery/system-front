@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import App from './Registry.vue'
+import App from './Users.vue'
 import VueSession from 'vue-session'
 Vue.use(VueSession)
 

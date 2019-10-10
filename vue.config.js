@@ -12,10 +12,10 @@ module.exports = {
             title: 'Menu',
             chunks: [ 'chunk-vendors', 'chunk-common', 'menu' ]
         },
-        'registry': {
-            entry: './src/pages/registry/registry.js',
+        'users': {
+            entry: './src/pages/users/users.js',
             template: 'public/index.html',
-            title: 'Registros',
+            title: 'Usuários',
             chunks: [ 'chunk-vendors', 'chunk-common', 'menu' ]
         }
     }

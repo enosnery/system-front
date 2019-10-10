@@ -9,8 +9,13 @@
              <span id="brand-name">Systema</span>
          </a>
          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-             <li class="nav-item">
-                <a class="nav-link" href="/registry">Cadastros</a>
+             <li class="nav-item dropdown box-menu">
+                <a class="nav-link dropdown-toggle" id="cadastroDropdown" role="button" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cadastros</a>
+                 <div class="dropdown-menu bg-dark box-menu" aria-labelledby="cadastroDropdown" >
+                     <a class="dropdown-item item-menu" href="/users">Usuários</a>
+                     <a class="dropdown-item item-menu" href="/user/products">Produtos</a>
+                     <a class="dropdown-item item-menu" href="/user/supplier">Fornecedores</a>
+                 </div>
              </li>
          </ul>
          <div class="d-flex justify-content-end">
@@ -44,6 +49,22 @@
         cursor: pointer;
         border-radius: 20px;
         background-color: slategrey;
+    }
+    .item-menu{
+        color: inherit;
+        text-decoration: none;
+        cursor: pointer;
+        border-radius: 20px;
+    }
+
+    .item-menu:hover{
+        color: white;
+        background-color: slategrey;
+    }
+
+    .box-menu{
+        color: white;
+        border-radius: 20px;
     }
 
     .navbar-brand{

@@ -46,7 +46,7 @@ export default {
       submit : function () {
 
           let self = this;
-          axios.post('http://192.168.0.147:8084/login', {
+          axios.post('http://192.168.0.38:8084/login', {
               login: self.login,
               password: self.password
           })

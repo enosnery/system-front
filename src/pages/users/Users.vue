@@ -6,11 +6,11 @@
       <div id="body-style">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-sm input-style"><h1>Bem-vindo ao Systema!</h1></div>
+                <div class="col-sm input-style"><h1>Bem-vindo ao Usuário!</h1></div>
             </div>
             <div class="row">
                 <div class="col-sm"></div>
-                <div class="col-sm input-style">{{session}}</div>
+                <div class="col-sm input-style">{{session.id}}</div>
                 <div class="col-sm"></div>
             </div>
             <div class="row">
