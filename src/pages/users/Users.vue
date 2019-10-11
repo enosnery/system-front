@@ -33,7 +33,7 @@ import axios from "axios";
 import Header from '../../components/Header'
 
 export default {
-  name: 'app',
+  name: 'users',
     beforeCreate: function () {
         if (!this.$session.exists()) {
             window.location.href = "/";

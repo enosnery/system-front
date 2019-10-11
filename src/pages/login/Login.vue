@@ -9,13 +9,12 @@
             </div>
             <div class="row">
                 <div class="col-sm"></div>
-                <div class="col-sm margin-style">
-                    <input v-model="login" class="form-control input-style" type="text" id="login" placeholder="Login" /> </div>
+                <div class="col-sm margin-style"><input v-model="login" class="form-control input-style" type="text" id="login" placeholder="Login" /></div>
                 <div class="col-sm"></div>
             </div>
             <div class="row">
                 <div class="col-sm"></div>
-                <div class="col-sm margin-style"><label for="password" class="">Senha</label><input v-model="password" class="form-control input-style" type="text" id="password" placeholder="Senha" /></div>
+                <div class="col-sm margin-style"><label for="password">{{password}}</label><input v-model="password" class="form-control input-style" type="text" id="password" placeholder="Senha" /></div>
                 <div class="col-sm"></div>
             </div>
             <div class="row">
@@ -47,7 +46,7 @@ export default {
       submit : function () {
 
           let self = this;
-          axios.post('http://192.168.0.38:8084/login', {
+          axios.post('http://192.168.0.147:8084/login', {
               login: self.login,
               password: self.password
           })

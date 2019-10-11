@@ -13,8 +13,8 @@
                 <a class="nav-link dropdown-toggle" id="cadastroDropdown" role="button" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cadastros</a>
                  <div class="dropdown-menu bg-dark box-menu" aria-labelledby="cadastroDropdown" >
                      <a class="dropdown-item item-menu" href="/users">Usuários</a>
-                     <a class="dropdown-item item-menu" href="/user/products">Produtos</a>
-                     <a class="dropdown-item item-menu" href="/user/supplier">Fornecedores</a>
+                     <a class="dropdown-item item-menu" href="/products">Produtos</a>
+                     <a class="dropdown-item item-menu" href="/supplier">Fornecedores</a>
                  </div>
              </li>
          </ul>
