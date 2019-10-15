@@ -9,7 +9,7 @@ module.exports = {
         'menu': {
             entry: './src/pages/menu/menu.js',
             template: 'public/index.html',
-            title: 'Menu',
+            title: 'Menu - Systema',
             chunks: [ 'chunk-vendors', 'chunk-common', 'menu' ]
         },
         'users': {

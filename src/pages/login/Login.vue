@@ -2,24 +2,24 @@
   <div id="app">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-sm input-style"><img src="../../assets/test_pattern.svg" alt="test" width="384"></div>
+                <div class="col-sm margin-style"><img src="../../assets/test_pattern.svg" alt="test" width="384"></div>
             </div>
             <div class="row">
-                <div class="col-sm input-style"><h1>Bem-vindo ao Systema!</h1></div>
-            </div>
-            <div class="row">
-                <div class="col-sm"></div>
-                <div class="col-sm input-style"><input v-model="login" class="form-control" type="text" id="login" placeholder="Login" /> </div>
-                <div class="col-sm"></div>
+                <div class="col-sm margin-style"><h1>Bem-vindo ao Systema!</h1></div>
             </div>
             <div class="row">
                 <div class="col-sm"></div>
-                <div class="col-sm input-style"><input v-model="password" class="form-control" type="text" id="password" placeholder="Senha" /></div>
+                <div class="col-sm margin-style"><input v-model="login" class="form-control input-style" type="text" id="login" placeholder="Login" /></div>
                 <div class="col-sm"></div>
             </div>
             <div class="row">
                 <div class="col-sm"></div>
-                <div class="col-sm input-style"><button class="btn btn-primary" v-on:click="submit()">Entrar</button></div>
+                <div class="col-sm margin-style"><label for="password">{{password}}</label><input v-model="password" class="form-control input-style" type="text" id="password" placeholder="Senha" /></div>
+                <div class="col-sm"></div>
+            </div>
+            <div class="row">
+                <div class="col-sm"></div>
+                <div class="col-sm margin-style"><button class="btn btn-success submit-button" v-on:click="submit()">Entrar</button></div>
                 <div class="col-sm"></div>
             </div>
         </div>
@@ -46,7 +46,7 @@ export default {
       submit : function () {
 
           let self = this;
-          axios.post('http://192.168.0.38:8084/login', {
+          axios.post('http://192.168.0.147:8084/login', {
               login: self.login,
               password: self.password
           })
@@ -78,10 +78,22 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #fff;
 }
-    .input-style{
+    .margin-style{
         margin: 1.5vh;
     }
 
+    .input-style{
+        width: 70%;
+        display: inline-block;
+        margin: 0 auto;
+
+
+    }
+
+    .submit-button{
+        width: 50%;
+        height: 100%;
+    }
 </style>
