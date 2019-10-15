@@ -35,9 +35,9 @@ import Header from '../../components/Header'
 export default {
   name: 'app',
     beforeCreate: function () {
-        if (!this.$session.exists()) {
-            window.location.href = "/";
-        }
+        // if (!this.$session.exists()) {
+        //     window.location.href = "/";
+        // }
     },
     components: {
       'menu-header': Header
@@ -49,7 +49,7 @@ export default {
     },
   methods:{
       submit : function () {
-          axios.post('http://192.168.0.147:8084/login', {
+          axios.post('http://192.168.0.38:8084/login', {
               login: this.login,
               password: this.password
           })
